@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "834722012886",
+    "firebase_url": "https://brickmate-da2d5-default-rtdb.firebaseio.com",
+    "project_id": "brickmate-da2d5",
+    "storage_bucket": "brickmate-da2d5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:834722012886:android:75a0ed80022a7f0b013377",
+        "android_client_info": {
+          "package_name": "com.indigi.brickmate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "834722012886-h4vas5pvtmfjs4ds9mugj4houo9de816.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDz3MZYqY2hK-5Gvaha-aUOhh_Cm2UAgXo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "834722012886-h4vas5pvtmfjs4ds9mugj4houo9de816.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

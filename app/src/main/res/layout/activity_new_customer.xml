@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.indigi.brickmate.ui.activities.NewCustomerActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_add_new_customer_activity"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/toolbar_title_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingStart="-25dp"
+            android:paddingEnd="0dp"
+            android:text="@string/title_add_new_customer"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/toolbar_title_text_size"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_add_new_customer_activity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="20dp"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/label_customer_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_new_customer_firstname"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/et_customer_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_border_white"
+                android:hint="@string/hint_customer_name"
+                android:inputType="text"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/label_customer_name" />
+
+            <TextView
+                android:id="@+id/label_customer_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/label_new_customer_email"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_customer_name" />
+
+            <EditText
+                android:id="@+id/et_customer_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_border_white"
+                android:hint="@string/hint_customer_email"
+                android:inputType="textEmailAddress"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/label_customer_email" />
+
+            <TextView
+                android:id="@+id/label_customer_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/label_new_customer_phone"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_customer_email" />
+
+            <EditText
+                android:id="@+id/et_customer_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_border_white"
+                android:hint="@string/hint_customer_phone"
+                android:inputType="phone"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/label_customer_phone" />
+
+            <TextView
+                android:id="@+id/label_customer_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/label_new_customer_address"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_customer_phone" />
+
+            <EditText
+                android:id="@+id/et_customer_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="80dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_border_white"
+                android:hint="@string/hint_customer_address"
+                android:inputType="textMultiLine"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/label_customer_address" />
+
+            <TextView
+                android:id="@+id/label_customer_gst_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/label_new_customer_gst"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_customer_address" />
+
+            <EditText
+                android:id="@+id/et_customer_gst_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_border_white"
+                android:hint="@string/hint_customer_gst_number"
+                android:inputType="text"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/label_customer_gst_number" />
+
+            <Button
+                android:id="@+id/btn_add_new_customer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center"
+                android:background="@drawable/card_bg"
+                android:textAllCaps="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="@string/add_new_customer"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/btn_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_customer_gst_number"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginLeft="2dp"-->
+    <!--        android:layout_marginRight="2dp"-->
+    <!--        android:layout_marginBottom="10dp"-->
+    <!--        android:orientation="vertical"-->
+    <!--        android:padding="5dp">-->
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:layout_marginLeft="6dp"-->
+    <!--            android:layout_marginTop="20dp"-->
+    <!--            android:orientation="vertical">-->
+
+    <!--            <TextView-->
+    <!--                android:fontFamily="@font/open_sans"-->
+    <!--                android:id="@+id/firstNameLabel"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_centerVertical="true"-->
+
+    <!--                android:padding="6dp"-->
+    <!--                android:text="Customer Name * : "-->
+    <!--                android:textColor="@android:color/black" />-->
+
+
+    <!--            <EditText-->
+    <!--                android:id="@+id/etFirstName"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginTop="6dp"-->
+    <!--                android:layout_marginRight="16dp"-->
+    <!--                android:layout_toRightOf="@+id/firstNameLabel"-->
+    <!--                android:background="@drawable/bg_border_white"-->
+    <!--                android:hint="Customer name"-->
+    <!--                android:inputType="text"-->
+    <!--                android:padding="6dp" />-->
+
+
+    <!--        </LinearLayout>-->
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:layout_marginLeft="6dp"-->
+    <!--            android:layout_marginTop="20dp"-->
+    <!--            android:orientation="vertical">-->
+
+    <!--            <TextView-->
+    <!--                android:fontFamily="@font/open_sans"-->
+    <!--                android:id="@+id/email"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_centerVertical="true"-->
+
+    <!--                android:padding="6dp"-->
+    <!--                android:text="Email Id * : "-->
+    <!--                android:textColor="@android:color/black" />-->
+
+
+    <!--            <EditText-->
+    <!--                android:id="@+id/email_id"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginTop="6dp"-->
+    <!--                android:layout_marginRight="16dp"-->
+    <!--                android:layout_toRightOf="@+id/firstNameLabel"-->
+    <!--                android:background="@drawable/bg_border_white"-->
+    <!--                android:hint="Email Id"-->
+    <!--                android:inputType="textEmailAddress"-->
+    <!--                android:padding="6dp" />-->
+
+
+    <!--        </LinearLayout>-->
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:layout_marginLeft="6dp"-->
+    <!--            android:layout_marginTop="20dp"-->
+    <!--            android:orientation="vertical">-->
+
+    <!--            <TextView-->
+    <!--                android:fontFamily="@font/open_sans"-->
+    <!--                android:id="@+id/phone"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_centerVertical="true"-->
+
+    <!--                android:padding="6dp"-->
+    <!--                android:text="Phone Number * : "-->
+    <!--                android:textColor="@android:color/black" />-->
+
+
+    <!--            <EditText-->
+    <!--                android:id="@+id/p_number"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginTop="6dp"-->
+    <!--                android:layout_marginRight="16dp"-->
+    <!--                android:layout_toRightOf="@+id/firstNameLabel"-->
+    <!--                android:background="@drawable/bg_border_white"-->
+    <!--                android:hint="Phone Number"-->
+    <!--                android:inputType="number"-->
+    <!--                android:maxLength="10"-->
+    <!--                android:padding="6dp" />-->
+
+
+    <!--        </LinearLayout>-->
+
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:layout_marginLeft="6dp"-->
+    <!--            android:visibility="gone"-->
+    <!--            android:layout_marginTop="20dp"-->
+    <!--            android:orientation="vertical">-->
+
+    <!--            <TextView-->
+    <!--                android:fontFamily="@font/open_sans"-->
+    <!--                android:id="@+id/deliv"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_centerVertical="true"-->
+
+    <!--                android:padding="6dp"-->
+    <!--                android:text="Delivery Address * : "-->
+    <!--                android:textColor="@android:color/black" />-->
+
+
+    <!--            <EditText-->
+    <!--                android:id="@+id/d_address"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="60dp"-->
+    <!--                android:layout_marginTop="6dp"-->
+    <!--                android:layout_marginRight="16dp"-->
+    <!--                android:layout_toRightOf="@+id/firstNameLabel"-->
+    <!--                android:background="@drawable/bg_border_white"-->
+    <!--                android:hint="Delivery Address"-->
+    <!--                android:maxLength="100"-->
+    <!--                android:padding="6dp" />-->
+
+
+    <!--        </LinearLayout>-->
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:layout_marginLeft="6dp"-->
+    <!--            android:layout_marginTop="20dp"-->
+    <!--            android:orientation="vertical">-->
+
+    <!--            <TextView-->
+    <!--                android:fontFamily="@font/open_sans"-->
+    <!--                android:id="@+id/Address"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_centerVertical="true"-->
+
+    <!--                android:padding="6dp"-->
+    <!--                android:text="Customer Address * : "-->
+    <!--                android:textColor="@android:color/black" />-->
+
+
+    <!--            <EditText-->
+    <!--                android:id="@+id/add"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="60dp"-->
+    <!--                android:layout_marginTop="6dp"-->
+    <!--                android:layout_marginRight="16dp"-->
+    <!--                android:layout_toRightOf="@+id/firstNameLabel"-->
+    <!--                android:background="@drawable/bg_border_white"-->
+    <!--                android:hint="Address"-->
+    <!--                android:maxLength="100"-->
+    <!--                android:padding="6dp" />-->
+
+
+    <!--        </LinearLayout>-->
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:layout_marginLeft="6dp"-->
+    <!--            android:layout_marginTop="20dp"-->
+    <!--            android:orientation="vertical">-->
+
+    <!--            <TextView-->
+    <!--                android:fontFamily="@font/open_sans"-->
+    <!--                android:id="@+id/gst"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_centerVertical="true"-->
+
+    <!--                android:padding="6dp"-->
+    <!--                android:text="GST Number * : "-->
+    <!--                android:textColor="@android:color/black" />-->
+
+
+    <!--            <EditText-->
+    <!--                android:id="@+id/GST"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginTop="6dp"-->
+    <!--                android:layout_marginRight="16dp"-->
+    <!--                android:layout_toRightOf="@+id/firstNameLabel"-->
+    <!--                android:background="@drawable/bg_border_white"-->
+    <!--                android:hint="GST Number"-->
+    <!--                android:padding="6dp" />-->
+
+
+    <!--        </LinearLayout>-->
+
+    <!--        <RelativeLayout-->
+    <!--            android:id="@+id/save"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_below="@+id/GST"-->
+    <!--            android:layout_marginLeft="40dp"-->
+    <!--            android:layout_marginTop="15dp"-->
+    <!--            android:layout_marginRight="40dp"-->
+    <!--            android:layout_marginBottom="10dp"-->
+    <!--            android:background="@drawable/card_bg">-->
+
+    <!--            <TextView-->
+    <!--                android:fontFamily="@font/open_sans"-->
+    <!--                android:id="@+id/C_Add"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_centerInParent="true"-->
+
+    <!--                android:padding="15dp"-->
+    <!--                android:text="Add"-->
+    <!--                android:textAllCaps="true"-->
+    <!--                android:textColor="@android:color/white"-->
+    <!--                android:textStyle="bold" />-->
+
+    <!--        </RelativeLayout>-->
+    <!--    </LinearLayout>-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
